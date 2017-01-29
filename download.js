@@ -1,6 +1,10 @@
-function download(filename, text1, text2) {
+function download(filename, check1, check2, check3, text1, text2, text3) {
 	var element = document.createElement('a');
-	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text1) + encodeURIComponent(text2));
+	element.setAttribute('href', 'data:text/plain;charset=utf-8,'
+	+ check1.value()
+	+ encodeURIComponent(text1) +
+	"," + encodeURIComponent(text2) +
+	"," + encodeURIComponent(text3));
 	element.setAttribute('download', filename);
 
 	element.style.display = 'none';
